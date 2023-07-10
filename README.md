@@ -14,19 +14,32 @@ Após a seleção, o sistema deve pedir para o usuário inserir o primeiro e seg
 
 Resposta: **
 
-def calculadora(1soma, 2subtracao, 3multiplicacao, 4divisao, 0sair, operacao) 
+def calculadora(1num, 2num, operacao):
 if (operacao ==1):
-return 1soma
+return 1num + 2num
 elif (operacao ==2):
-return 2subtracao
+return 1num - 2num
 elif (operacao ==3):
-return 3multiplicacao
-elif (operacao ==4): 
-return 4divisao
-elif (operacao ==0):
-else return 0sair
-else:
-print('Essa opção não existe!')
-return (1soma, 2subtracao, 3multiplicacao, 4divisao, 0sair, operacao)
+return  1num * 2num
+elif (operacao ==4):
+return 1num / 2num
+else: 
+return 0
 
+executar = True
 
+while (executar == True): 
+print("Qual conta você deseja realizar?")
+print("1: Soma 2: Subtração 3: Multiplicação 4: Divisão 0: Sair")
+operacao = int(input())
+if(operacao < 0) or (operacao > 4):
+print("Essa opção não existe")
+elif(operacao == 0):
+executar = False
+else: 
+print("Insira o primeiro número da operação:")
+1num = int(input())
+print("Insira o segundo número da operação:")
+2num = int(input())
+resultado = calculadora (num1, 2num, operacao)
+print("O resultado é:", resultado)
